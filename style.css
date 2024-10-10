@@ -24,3 +24,8 @@ main::before{
     display: block;
     height: 180px;
 }
+@media (max-width: 768px) {
+    main::before{
+        height: 100px;
+    }
+}
