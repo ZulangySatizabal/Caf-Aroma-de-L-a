@@ -1,4 +1,12 @@
+/* Header */
+@import url("css/header.css");
+
+/* Catálogo de productos */
+@import url("css/products.css");
+
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Parisienne&display=swap');
+
 
 *{
     padding: 0;
@@ -7,67 +15,12 @@
 }
 body{
     font-family: "Lato", sans-serif;
+    background-image: url("assets/background.jpg");
+    background-size: cover;
 }
 
-/* Header  */
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ccbca2;
-
-    /* posición fija  */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo{
-    width: 180px;
-}
-
-/* navbar */
-.navbar ul{
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    gap: 20px;
-    /* padding: 15px 0; */
-    list-style-type: none;
-}
-
-.navbar a{ 
-    text-decoration: none;
-    font-size: 20px;
-    color: #4B2E2B;
-    padding: 5px;
-    font-weight: 600;
-}
-.navbar a:hover{
-    color: white;
-    border-bottom: 2px solid #eee;
-    transition: all 0.2s ease;
-}
-
-/* submenu */
-.dropdown{
-    position: relative;
-}
-.navbar .dropdown-menu{
-    display: none;
-    position: absolute;
-    background-color: #ccbca2;
-    padding: 10px;
-    list-style: none;
-    top: 100%;
-    left: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.dropdown:hover .dropdown-menu {
+main::before{
+    content: "";
     display: block;
-}
-
-.dropdown-menu li {
-    margin: 5px 0;
+    height: 180px;
 }
