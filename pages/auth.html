@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticación - Café Aroma de Lía</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Inicia Sesión</h2>
+        <form action="/login" method="post">
+
+            <label for="username">Correo electrónico</label>
+            <input type="text" name="username" id="username" placeholder="Ingresa tu nombre de usuario" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+    <div class="auth-container register">
+        <h2>Registro de usuario</h2>
+        <form action="/register" method="post">
+
+            <label for="register-name">Nombre *</label>
+            <input type="text" name="register-name" id="register-name" placeholder="Nombre" required>
+
+            <label for="register-surname">Apellido *</label>
+            <input type="text" name="register-surname" id="register-surname" placeholder="Apellido" required>
+
+            <label for="telephone">Teléfono</label>
+            <input type="phone" name="telephone" id="telephone" placeholder="Ingrese un número de teléfono" required>
+
+            <label for="email">Correo electrónico *</label>
+            <input type="email" name="email" id="email" placeholder="Ingresa tu correo electrónico" required>
+            
+            <label for="password">Contraseña *</label>
+            <input type="password" name="password" placeholder="Escriba una contraseña" required>
+
+            <label for="password">Confirmar contraseña *</label>
+            <input type="password" name="confirm_password" placeholder="Confirme su contraseña" required>
+
+            <button type="submit">Registrarse</button>
+        </form>
+        <span>* campos obligatorios</span>
+    </div>
+</body>
+</html>
