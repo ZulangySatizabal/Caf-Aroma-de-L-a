@@ -5,6 +5,7 @@ export function toggleMenu(){
     let navMenu = document.getElementById("nav-menu");
 
     button.addEventListener("click", function() {
+        console.log("toggle")
         navMenu.classList.toggle("active");
     });
 };

@@ -1,3 +1,6 @@
+//añadir productos al carrito de compras
+// import { addCart } from "./cart";
+
 // lista con los productos
 export const products = [
 	{
@@ -43,14 +46,14 @@ export const products = [
 		price: 150,
 	},
 	{
-		id: 8,
+		id: 7,
 		img: "https://i.pinimg.com/originals/71/3f/0b/713f0b7701b3e801c15e1e6c43a1cb78.jpg",
 		name: "Café",
 		description:"Una taza de café puro, de sabor intenso y aroma profundo, ideal para iniciar el día con energía.",
 		price: 150,
 	},
 	{
-		id: 9,
+		id: 8,
 		img: "https://i.pinimg.com/originals/71/3f/0b/713f0b7701b3e801c15e1e6c43a1cb78.jpg",
 		name: "Café",
 		description:"Una taza de café puro, de sabor intenso y aroma profundo, ideal para iniciar el día con energía.",
@@ -66,19 +69,24 @@ export function renderProducts(){
     products.map((o) => {
       // se crean las cards en el index
         card.innerHTML += `
-            <article class="col card-container">
+            <article class="col card-container" id="product-${o.id}">
                 <div class="card h-100 card-product">
                     <div class="card-product-image">
                         <img src="${o.img}" class="card-img-top" alt="${o.name}">
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">${o.name}</h3>
+                        <h3 class="card-title product-name">${o.name}</h3>
                         <p class="card-text">${o.description}</p>
                         <span class="card-price"><strong>$${o.price}</strong></span>
                     </div>
-                    <div class="card-footer">
-                        <button type="button" class="card-button btn btn-outline-dark">
-                        Agregar al carrito
+					<div class="card-footer">
+						<button 
+							onclick="addCart(${o.id})" 
+							id="cart-shopping" 
+							type="button" 
+							class="card-button btn btn-outline-dark">
+								Agregar al carrito
+								<i class="fa fa-cart-shopping"></i>
                         </button>
                     </div>
                 </div>
